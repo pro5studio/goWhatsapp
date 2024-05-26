@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#25D366" />
+  <title>goWhatsApp</title>
+  <style>
+    * {
+      font-size: 50px;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .anadiv {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background: url(./whatsapp\ bg.png) no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    .div {
+      position: relative;
+      width: 80vw;
+      height: auto;
+      margin-left: 5vw;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px 10px 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 30px;
+      background-color: transparent;
+      border: 7px solid #b9c7be;
+    }
+
+
+    #phoneNumberInput {
+      position: relative;
+      width: 80%;
+      height: 30px;
+      background-color: #ddd;
+      border: 5px solid #edfff3;
+      border-radius: 15px;
+      justify-content: center;
+      padding: 10px 20px;
+      font-size: 20px;
+      outline: none;
+    }
+
+    input {
+      position: relative;
+      width: 80%;
+      height: 150px;
+      background-color: #ddd;
+      border: 5px solid #edfff3;
+      border-radius: 15px;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      position: relative;
+      width: 80%;
+      height: 150px;
+      background-color: #ddd;
+      border: 5px solid #edfff3;
+      border-radius: 15px;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 18px;
+      vertical-align: baseline;
+      line-height: 15px;
+      resize: none;
+      direction: rtl;
+      display: none;
+      outline: none;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .message.tr {
+      direction: ltr;
+    }
+
+
+    button {
+      padding: 20px;
+      border: green solid 5px;
+      color: green;
+      border: 3px solid green;
+      border-radius: 15px;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 22px;
+      width: 70%;
+      color: green;
+      text-align: center;
+      justify-content: center;
+      margin: 10px auto;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    p {
+      font-size: 15px;
+      color: red;
+      justify-content: center;
+    }
+
+
+    .yazilimci {
+      text-align: center;
+      margin: 90px 0 0;
+      height: auto;
+      overflow-y: hidden;
+    }
+
+    .kotada {
+      width: 100px;
+      padding: 0;
+      border: 5px solid rgb(223, 201, 0);
+      border-radius: 50%;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #f56040;
+      padding: 10px 20px;
+      border-radius: 15px;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .messageEkle {
+      text-decoration: none;
+      letter-spacing: 1px;
+      background-color: transparent;
+      color: green;
+      font-weight: 900;
+      border: 2px solid green;
+      border-radius: 5px;
+      font-size: 15px;
+      padding: 2px 5px;
+      margin: 0;
+      font-size: large;
+    }
+
+    .png {
+      width: 70px;
+    }
+
+    #tr {
+      font-size: 15px;
+      padding: 0px;
+      padding: 13px;
+      margin-left: 15px;
+      border: none;
+      color: white;
+      background-color: #E30A17;
+      font-weight: 600;
+    }
+
+    #ar {
+      font-size: 15px;
+      padding: 0px;
+
+      border: none;
+      color: white;
+      background-color: green;
+      font-weight: 600;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="anadiv">
+    <div class="dil">
+      <button id="tr">Türkçe</button>
+      <button id="ar">اللغة العربية</button>
+    </div>
+    <div class="div">
+      <img class="png" src="./whatsapp png.png" alt="wh png">
+      <h1 id="h1">إضافة جهات الإتصال الى الواتس اب بدون الحاجة إلى حفظها على الهاتف</h1>
+      <input id="phoneNumberInput" value="" inputmode="numeric" placeholder="05*********">
+      <br>
+      <span id="messageEkle" class="messageEkle" href="">إضافة رسالة</span>
+      <br>
+      <textarea id="message" name="message" class="message" type="text"
+        placeholder="الرسالة.....   اختيارية"></textarea>
+      <br>
+      <button id="sendButton">انتقل مباشرة إلى واتس اب</button>
+    </div>
+    <div class="ara"></div>
+    <div class="yazilimci">
+      <img class="kotada" src="./kotada.jpg" alt="">
+      <h3 id="yazilim">المبرمج: قتادة الخلف</h3>
+      <a href="https://www.instagram.com/pro5studio?igsh=MTE0emZkaXVwNTYzeQ==" target="_blank">İNSTAGRAM</a>
+    </div>
+  </div>
+  </div>
+  <script>
+    const sendButton = document.getElementById('sendButton');
+    const phoneNumberInput = document.getElementById('phoneNumberInput');
+    let h1 = document.getElementById("h1");
+    let message = document.getElementById("message");
+    let ar = document.getElementById("ar");
+    let tr = document.getElementById("tr");
+    let h3yazilim = document.getElementById("yazilim");
+    let messageEkle = document.getElementById("messageEkle");
+
+    messageEkle.addEventListener('click', function () {
+      message.style.display = "block";
+      messageEkle.remove();
+    })
+
+    function encodeMessage(message) {
+      return message.replace(/ /g, "%20");
+    }
+
+
+    tr.addEventListener('click', function () {
+      h1.innerHTML = "Kişileri kaydetmenize gerek kalmadan WhatsApp'a ekleyin";
+      sendButton.innerHTML = "WhatsApp'a Yölendir";
+      h3yazilim.innerHTML = "Yazılımcı: Katade EL HALAF";
+      message.placeholder = "Mesajiniz.... İsteye Bağlı";
+      message.classList.add("tr");
+      messageEkle.innerHTML = "Mesaj Ekleyin";
+    })
+
+    ar.addEventListener('click', function () {
+      h1.innerHTML = "إضافة جهات الإتصال الى الواتس اب بدون الحاجة إلى حفظها على الهاتف";
+      sendButton.innerHTML = "انتقل مباشرة إلى واتس اب";
+      h3yazilim.innerHTML = "المبرمج: قتادة الخلف";
+      message.placeholder = "الرسالة.....   اختيارية";
+      message.classList.remove("tr");
+      messageEkle.innerHTML = "إضافة رسالة";
+    })
+
+
+    phoneNumberInput.addEventListener('input', function () {
+      if (phoneNumberInput.value.trim().length > 11 || isNaN(phoneNumberInput.value.trim())) {
+        phoneNumberInput.style.border = '5px solid red';
+        sendButton.style.background = 'white';
+        sendButton.style.color = 'green';
+      } else if (phoneNumberInput.value.trim().length === 11 && phoneNumberInput.value[0] !== '0') {
+        phoneNumberInput.style.border = '5px solid red';
+        sendButton.style.background = 'white';
+        sendButton.style.color = 'green';
+      } else if (phoneNumberInput.value.trim().length == 11 && !isNaN(phoneNumberInput.value)) {
+        phoneNumberInput.style.border = '5px solid green';
+        sendButton.style.background = 'green';
+        sendButton.style.color = 'white';
+      } else if (phoneNumberInput.value.trim().length === 10 && phoneNumberInput.value[0] !== '0') {
+        phoneNumberInput.style.border = '5px solid green';
+        sendButton.style.background = 'green';
+        sendButton.style.color = 'white';
+      } else {
+        phoneNumberInput.style.border = '5px solid white';
+        sendButton.style.background = 'white';
+        sendButton.style.color = 'green';
+      }
+    });
+    sendButton.addEventListener('click', function () {
+
+      const phoneNumber = phoneNumberInput.value;
+
+      if (phoneNumber.trim() === '') {
+        alert("يرجى إدخال الرقم أولا")
+      } else if (isNaN(phoneNumber.trim())) {
+        alert("يرجى كتابة الرقم بشكل صحيح")
+      } else if (phoneNumberInput.value.trim().length < 11 && phoneNumberInput.value[0] === '0') {
+        alert("يرجى كتابة الرقم بشكل صحيح")
+      } else if (phoneNumber[0] === '0' && phoneNumber[1] === '0') {
+        alert("يرجى كتابة الرقم بشكل صحيح")
+      } else if (phoneNumberInput.value.trim().length < 11 && phoneNumberInput.value[0] === '0') {
+        alert("الرقم الذي أدخلته ناقص !")
+      } else if (phoneNumberInput.value.trim().length > 11) {
+        alert("الرقم الذي أدخلته اطول مما ينبغي !")
+      } else {
+        let encodedMessage = encodeMessage(message.value);
+        const whatsappLink = `https://wa.me/+90${phoneNumber.trim()}? text=${encodedMessage}`;
+        window.open(whatsappLink);
+      }
+    });
+  </script>
+
+</body>
+
+</html>
