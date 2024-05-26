@@ -299,7 +299,7 @@
       } else if (phoneNumberInput.value.trim().length > 11) {
         alert("الرقم الذي أدخلته اطول مما ينبغي !")
       } else {
-        let encodedMessage = encodeMessage(message.value);
+        let encodedMessage = message.value;
         const whatsappLink = `https://wa.me/+90${phoneNumber.trim()}? text=${encodedMessage}`;
         window.open(whatsappLink);
       }
